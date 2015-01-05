@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+
+{%for a in all%}
+{{a.id}}|{{a.name}}|{{a.address}}</p>
+{%endfor%}
+</p> 
+
+<form action="/ne" method="POST">
+{%csrf_token%}
+<input type='text' name='name'/>
+<input type='text' name='address'/>
+<button>send</button>
+</form>
